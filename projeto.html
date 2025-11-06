@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherWorks - Projeto Digital Twin</title>
+    <meta name="description" content="Projeto Digital Twin de sistema pneumático desenvolvido pela AetherWorks em parceria com FESTO e FIAP">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho_container">
+            <div class="cabecalho_grupo">
+                <img class="cabecalho_logo" src="./assets/logo.png" alt="Logo AetherWorks">
+                <h1 class="cabecalho_nome">AetherWorks</h1>
+            </div>
+            <nav class="cabecalho_nav">
+                <a class="cabecalho_link" href="desafio.html">Desafio</a>
+                <a class="cabecalho_link cabecalho_link--ativo" href="projeto.html">Projeto</a>
+                <a class="cabecalho_link" href="grupo.html">Grupo</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="conteudo_principal">
+        <div class="container">
+            <h2 class="pagina_titulo">Projeto Digital Twin</h2>
+            
+            <section class="secao_projeto">
+                <h3 class="secao_titulo">Parte Física</h3>
+                <div class="secao_conteudo">
+                    <p class="secao_texto">Começando pela estrutura da parte física, ela foi feita de aço inox por conta do teor sanitário relacionado ao projeto, além de também poder ser facilmente desmontado para limpeza.</p>
+                    <p class="secao_texto">A principal linguagem utilizada nessa parte foi <strong>C/C++</strong></p>
+                    <p class="secao_texto">O microcontrolador utilizado para esse projeto foi o <strong>Arduino Uno</strong>, ele é responsável por controlar o movimento do sistema, além de também a leitura dos seguintes sensores:</p>
+                    
+                    <div class="tabela_container">
+                        <table class="tabela_sensores">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Sensor</th>
+                                    <th>Modelo</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sensor Ultrassônico</td>
+                                    <td>HC-SR04</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Sensor de Reflexão Infravermelho</td>
+                                    <td>TCRT-5000</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Termopar</td>
+                                    <td>Tipo K</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Sensor de Pressão</td>
+                                    <td>XGZP701DBR1R</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <figure class="projeto_figura">
+                        <img class="projeto_imagem" src="./assets/fisico.png" alt="Imagem do projeto físico mostrando a estrutura de aço inox com Arduino Uno e sensores">
+                        <figcaption class="projeto_legenda">Estrutura física do sistema pneumático</figcaption>
+                    </figure>
+                </div>
+            </section>
+            
+            <section class="secao_projeto">
+                <h3 class="secao_titulo">Comunicação</h3>
+                <div class="secao_conteudo">
+                    <p class="secao_texto">A comunicação é a parte responsável pela ligação entre o modelo físico e o modelo digital.</p>
+                    <p class="secao_texto">A principal linguagem utilizada nessa parte foi <strong>Python</strong></p>
+                    <p class="secao_texto">O conceito utilizado para fazer a comunicação é o do <strong>Web Socket</strong>, em que ele mantém a leitura e envios constantes da parte física e da parte digital.</p>
+                    <p class="secao_texto">Outra função da parte da comunicação é o salvamento de logs para o funcionamento do sistema ser analisado depois.</p>
+                </div>
+            </section>
+            
+            <section class="secao_projeto">
+                <h3 class="secao_titulo">Parte Digital</h3>
+                <div class="secao_conteudo">
+                    <p class="secao_texto">A principal linguagem utilizada nessa parte foi <strong>C#</strong> para o modelo e <strong>TypeScript</strong> para a criação do Front-end.</p>
+                    <p class="secao_texto">Na parte digital é possível ver as alterações que ocorrem no modelo físico, por meio do modelo digital e de gráficos na lateral da dashboard.</p>
+                    <p class="secao_texto">Outra funcionalidade implementada é a fácil configuração da porta USB no computador e a possibilidade de ser visto os arquivos JSON enviados para o Front-end, sendo bem útil para correção de bugs.</p>
+                    
+                    <figure class="projeto_figura">
+                        <img class="projeto_imagem" src="./assets/digital.png" alt="Interface digital mostrando dashboard com gráficos e modelo 3D do sistema">
+                        <figcaption class="projeto_legenda">Dashboard do Digital Twin com visualização em tempo real</figcaption>
+                    </figure>
+                </div>
+            </section>
+            
+            <section class="secao_projeto">
+                <h3 class="secao_titulo">Vídeo Demonstração</h3>
+                <div class="secao_conteudo">
+                    <div class="video_container">
+                        <video class="projeto_video" src="./assets/demonstracao.mp4" controls>
+                            Seu navegador não suporta a reprodução de vídeos.
+                        </video>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Adicionada nova seção com link do GitHub -->
+            <section class="secao_projeto">
+                <h3 class="secao_titulo">Repositório do Projeto</h3>
+                <div class="secao_conteudo">
+                    <p class="secao_texto">Todo o código-fonte do projeto está disponível no GitHub. Acesse o repositório para ver a implementação completa, documentação técnica e histórico de desenvolvimento.</p>
+                    <a class="github_link" href="https://github.com/RPPombo/Digital-Twin" target="_blank" rel="noopener noreferrer">
+                        <svg class="github_icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Acessar Repositório no GitHub
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape_container">
+            <p class="rodape_texto">© 2025 AetherWorks - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
