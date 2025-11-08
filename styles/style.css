@@ -367,6 +367,23 @@ body {
   border-top: 1px solid #e0e0e0;
 }
 
+/* Adicionando estilos para links clicáveis nos cards dos membros */
+.membro_link {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: var(--transicao);
+  word-break: break-all;
+}
+
+.membro_link:hover {
+  color: var(--cor-hover);
+  text-decoration: none;
+  background-color: rgba(25, 25, 25, 0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
 /* ===================================
    Página de Projeto
    =================================== */
